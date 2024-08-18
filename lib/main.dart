@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       //   builder: (context, child) => AppAboutDialog(),
+      //showSemanticsDebugger: true,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
       theme: Provider.of<ThemeProvider>(context).theme,

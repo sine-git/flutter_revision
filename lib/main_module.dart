@@ -25,11 +25,17 @@ import 'app_animated_modal_barrier.dart';
 import 'app_new_animated_list.dart';
 import 'aspect_ratio.dart';
 import 'auto_complete.dart';
+import 'back_drop_widget.dart';
+import 'banner.dart';
+import 'baseline.dart';
+import 'block_semantic.dart';
+import 'bottom_navigation_bar.dart';
+import 'bottom_sheet.dart';
 import 'my_animation.dart';
 
 class MainModule extends Module {
   List<Bind> get binds => [Bind((i) => MainService())];
 
   List<ModularRoute> get routes =>
-      [ChildRoute("/", child: (context, args) => AppAutoComplete())];
+      [ChildRoute("/", child: (context, args) => AppBottomSheet())];
 }
