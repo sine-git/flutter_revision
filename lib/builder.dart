@@ -16,7 +16,9 @@ class _AppBuilderState extends State<AppBuilder> {
   }
 }
 
-myWidget() => Text(
-      'Text with theme',
-      style: Theme.of(context).textTheme.displayLarge,
-    );
+myWidget() => Builder(builder: (context) {
+      return Text(
+        'Text with theme',
+        style: Theme.of(context).textTheme.displayLarge,
+      );
+    });
