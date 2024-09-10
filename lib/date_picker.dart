@@ -23,7 +23,6 @@ class _AppDatePickerState extends State<AppDatePicker> {
                       initialDate: DateTime(2000),
                       firstDate: DateTime(2000),
                       lastDate: DateTime(2000));
-
                   setState(() {
                     dateTime = dateTime;
                   });

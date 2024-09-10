@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_revision/main_service.dart';
 
-import 'date_picker.dart';
+import 'form.dart';
 
 class MainModule extends Module {
   @override
@@ -9,5 +9,5 @@ class MainModule extends Module {
 
   @override
   List<ModularRoute> get routes =>
-      [ChildRoute("/", child: (context, args) => const AppDatePicker())];
+      [ChildRoute("/", child: (context, args) => const AppFormWidget())];
 }
