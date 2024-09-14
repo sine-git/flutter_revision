@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_revision/main_service.dart';
 
-import 'form.dart';
+import 'hero.dart';
 
 class MainModule extends Module {
   @override
@@ -9,5 +9,5 @@ class MainModule extends Module {
 
   @override
   List<ModularRoute> get routes =>
-      [ChildRoute("/", child: (context, args) => const AppFormWidget())];
+      [ChildRoute("/", child: (context, args) => const AppHeroWidget())];
 }
