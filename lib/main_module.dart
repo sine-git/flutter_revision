@@ -1,13 +1,15 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_revision/main_service.dart';
 
-import 'hero.dart';
+import 'long_press_dragable.dart';
 
 class MainModule extends Module {
   @override
   List<Bind> get binds => [Bind((i) => MainService())];
 
   @override
-  List<ModularRoute> get routes =>
-      [ChildRoute("/", child: (context, args) => const AppHeroWidget())];
+  List<ModularRoute> get routes => [
+        ChildRoute("/",
+            child: (context, args) => const AppLongPressDragableWidget())
+      ];
 }
