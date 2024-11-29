@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class AppAutoComplete extends StatefulWidget {
   const AppAutoComplete({super.key});
@@ -18,7 +16,7 @@ class _AppAutoCompleteState extends State<AppAutoComplete> {
         child: Autocomplete<String>(
           optionsBuilder: (textEditingValue) {
             if (textEditingValue.text == '') {
-              return Iterable<String>.empty();
+              return const Iterable<String>.empty();
             }
             return fruits
                 .where((element) => element.contains(textEditingValue.text));

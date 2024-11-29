@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Africa",
+        "lastLevel": false,
+        "children": [
+            {
+                "name": "Ivory Coast",
+                "lastLevel": true,
+                "bundles": [
+                    {
+                        "name": "Data nighty",
+                        "amount": "100",
+                        "currency": "USD",
+                        "paymentType": "TELCO"
+                    }
+                ]
+            },
+            {
+                "name": "Ivory Coast",
+                "lastLevel": true,
+                "bundles": [
+                    {
+                        "name": "Data nighty",
+                        "amount": "100",
+                        "currency": "USD",
+                        "paymentType": "TELCO"
+                    }
+                ]
+            }
+        ]
+    }
+],
+[
+    {
+        "name": "Ivory Coast",
+        "lastLevel": true,
+        "bundles": [
+            {
+                "name": "Data nighty",
+                "amount": "100",
+                "currency": "USD",
+                "paymentType": "TELCO"
+            }
+        ]
+    },
+],
+[
+    {
+        "groupB": {
+            "name": "Cote d'ivoire",
+            "amount": "100",
+            "currency": "USD",
+            "paymentType": "TELCO"
+        }
+    }
+]
