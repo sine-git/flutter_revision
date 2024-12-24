@@ -10,6 +10,10 @@ void main() {
     create: (context) => ThemeProvider(),
     child: ModularApp(module: MainModule(), child: MyApp()),
   )); */
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.presentError(details); // Affiche les erreurs normalement
+    debugPrint(details.toStringShort()); // Affiche une trace détaillée
+  };
 
   runApp(ChangeNotifierProvider(
       create: (context) => ThemeProvider(),

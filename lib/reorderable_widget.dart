@@ -16,13 +16,21 @@ class AppReordonableListViewWidgetState
     return Scaffold(
       body: Center(
           child: ReorderableListView(
-        onReorder: (oldIndex, newIndex) {},
+        onReorder: (oldIndex, newIndex) {
+          setState(() {
+            if (oldIndex < newIndex) {
+              newIndex -= 1;
+            }
+            final int item = items.removeAt(oldIndex);
+            items.insert(newIndex, item);
+          });
+        },
         children: List.generate(
             items.length,
             (index) => ListTile(
                   key: Key('$index'),
                   tileColor:
-                      items[index].isOdd ? Colors.white12 : Colors.white30,
+                      items[index].isOdd ? Colors.black12 : Colors.black38,
                   title: Text("Item : $index"),
                   trailing: const Icon(Icons.drag_handle_sharp),
                 )),
