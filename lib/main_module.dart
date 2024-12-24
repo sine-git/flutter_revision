@@ -42,14 +42,17 @@ import 'package:flutter_revision/toggle_button.dart';
 import 'package:flutter_revision/tool_tip.dart';
 import 'package:flutter_revision/transform.dart';
 import 'package:flutter_revision/tween_animation_builder.dart';
+import 'package:flutter_revision/value_listenable.dart';
+import 'package:flutter_revision/vertical_divider.dart';
+import 'package:flutter_revision/visibility.dart';
+import 'package:flutter_revision/will_pop_scope.dart';
+import 'package:flutter_revision/wrap.dart';
 
 class MainModule extends Module {
   @override
   List<Bind> get binds => [Bind((i) => MainService())];
 
   @override
-  List<ModularRoute> get routes => [
-        ChildRoute("/",
-            child: (context, args) => const AppTweenAnimationBuilderWidget())
-      ];
+  List<ModularRoute> get routes =>
+      [ChildRoute("/", child: (context, args) => const AppWrapWidget())];
 }
