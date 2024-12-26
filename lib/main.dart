@@ -36,7 +36,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       //   builder: (context, child) => AppAboutDialog(),
       //showSemanticsDebugger: true,
-
       debugShowCheckedModeBanner: false,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,

@@ -25,7 +25,7 @@ class _AppAnimatedModalBarrierState extends State<AppAnimatedModalBarrier>
         end: Colors.blueGrey.withOpacity(0.5));
 
     _animationController =
-        AnimationController(duration: Duration(seconds: 3), vsync: this);
+        AnimationController(duration: const Duration(seconds: 3), vsync: this);
     _animationColor = colorTween.animate(_animationController);
 
     _animatedModalBarrier = AnimatedModalBarrier(
@@ -40,7 +40,7 @@ class _AppAnimatedModalBarrierState extends State<AppAnimatedModalBarrier>
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Column(
             children: [
               SizedBox(
@@ -56,15 +56,15 @@ class _AppAnimatedModalBarrierState extends State<AppAnimatedModalBarrier>
                         });
                         _animationController.reset();
                         _animationController.forward();
-                        Future.delayed(Duration(milliseconds: 500), () {
+                        Future.delayed(const Duration(milliseconds: 500), () {
                           setState(() {
                             _isPressed = false;
                           });
                         });
                       },
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.orangeAccent),
-                      child: Text("Press"),
+                          backgroundColor: Colors.orangeAccent),
+                      child: const Text("Press"),
                     ),
                     if (_isPressed) _animatedModalBarrier
                   ],

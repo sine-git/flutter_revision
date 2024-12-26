@@ -18,11 +18,11 @@ class _AppAnimatedRotationState extends State<AppAnimatedRotation> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(50),
+              padding: const EdgeInsets.all(50),
               child: AnimatedRotation(
                 turns: turns,
-                duration: Duration(seconds: 1),
-                child: FlutterLogo(
+                duration: const Duration(seconds: 1),
+                child: const FlutterLogo(
                   size: 100,
                 ),
               ),
@@ -33,8 +33,9 @@ class _AppAnimatedRotationState extends State<AppAnimatedRotation> {
                   turns += 1 / 4;
                 });
               },
-              child: Text("Rotate Logo"),
-              style: ElevatedButton.styleFrom(primary: Colors.deepPurple),
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
+              child: const Text("Rotate Logo"),
             )
           ],
         ),
