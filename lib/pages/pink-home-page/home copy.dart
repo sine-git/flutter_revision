@@ -19,8 +19,8 @@ class _HomPageState extends State<HomPage> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-              floating: true,
-              pinned: false,
+              floating: false,
+              pinned: true,
               leading: const Padding(
                 padding: EdgeInsets.all(8),
                 child: CircleAvatar(
@@ -65,12 +65,10 @@ class _HomPageState extends State<HomPage> {
                         clipBehavior: Clip.antiAlias,
                         clipper: PinkCusomClipPath(),
                         child: Image.asset(
-                          "assets/images/traditional-women-yellow.jpeg",
+                          "assets/images/pink-suit-jean-resized.jpeg",
                           fit: BoxFit.cover,
                           width: 380,
                           height: 400,
-                          alignment: Alignment.center,
-                          scale: 1.1,
                         )
 
                         /* Image.asset(
@@ -155,37 +153,6 @@ class _HomPageState extends State<HomPage> {
                               ),
                             ],
                           )
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20, right: 16),
-                      child: Row(
-                        children: [
-                          Flexible(
-                            child: CommunityCard(
-                              minutes: 23,
-                              description: "5 Tips To Recharge Your Motivation",
-                              members: 25,
-                              backgroundGradient: const [
-                                Color(0xFFFE953C),
-                                Color(0xFFFFFFFF),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Flexible(
-                              child: CommunityCard(
-                                  minutes: 42,
-                                  description:
-                                      "5 Tips To Recharge Your Motivation",
-                                  members: 25,
-                                  backgroundGradient: const [
-                                Color(0xFFFFE258),
-                                Color(0xFFFFFFFF)
-                              ]))
                         ],
                       ),
                     ),

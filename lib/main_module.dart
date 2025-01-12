@@ -3,6 +3,7 @@ import 'package:flutter_revision/app_snack_bar.dart';
 import 'package:flutter_revision/increment_intent.dart';
 import 'package:flutter_revision/main_service.dart';
 import 'package:flutter_revision/pages/green-landing-page/home.dart';
+import 'package:flutter_revision/pages/pink-home-page/card-page.dart';
 import 'package:flutter_revision/pages/pink-home-page/home.dart';
 import 'package:flutter_revision/scale_transition.dart';
 import 'package:flutter_revision/scroll_widget.dart';
@@ -56,5 +57,5 @@ class MainModule extends Module {
 
   @override
   List<ModularRoute> get routes =>
-      [ChildRoute("/", child: (context, args) => const HomPage())];
+      [ChildRoute("/", child: (context, args) => const WheelCardsPage())];
 }
