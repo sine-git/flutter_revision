@@ -2,7 +2,11 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_revision/app_snack_bar.dart';
 import 'package:flutter_revision/increment_intent.dart';
 import 'package:flutter_revision/main_service.dart';
+import 'package:flutter_revision/pages/contact-page/contact-page.dart';
 import 'package:flutter_revision/pages/green-landing-page/home.dart';
+import 'package:flutter_revision/pages/music-player/music-module.dart';
+import 'package:flutter_revision/pages/music-player/play-list.dart';
+import 'package:flutter_revision/pages/music-player/song-player.dart';
 import 'package:flutter_revision/pages/pink-home-page/card-page.dart';
 import 'package:flutter_revision/pages/pink-home-page/home.dart';
 import 'package:flutter_revision/scale_transition.dart';
@@ -56,6 +60,8 @@ class MainModule extends Module {
   List<Bind> get binds => [Bind((i) => MainService())];
 
   @override
-  List<ModularRoute> get routes =>
-      [ChildRoute("/", child: (context, args) => const WheelCardsPage())];
+  List<ModularRoute> get routes => [
+        ChildRoute("/", child: (context, args) => const SongPlayerPage()),
+        ModuleRoute("/music", module: MusicModule())
+      ];
 }

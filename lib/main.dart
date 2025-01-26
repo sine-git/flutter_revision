@@ -40,7 +40,8 @@ class MyApp extends StatelessWidget {
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
       //theme: Provider.of<ThemeProvider>(context).theme,
-      themeMode: ThemeMode.dark,
+      theme: theme,
+      //themeMode: ThemeMode.dark,
     );
 
     /* return CupertinoApp.router(
@@ -49,3 +50,12 @@ class MyApp extends StatelessWidget {
  */
   }
 }
+
+ThemeData theme = ThemeData(
+    colorScheme: const ColorScheme.light(
+        primary: Colors.black,
+        secondary: Colors.grey,
+        tertiary: Colors.pink,
+        inverseSurface: Colors.white,
+        secondaryContainer: Color.fromARGB(255, 218, 215, 215),
+        scrim: Color.fromARGB(255, 93, 93, 93)));
