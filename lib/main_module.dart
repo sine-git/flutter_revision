@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_revision/animations/animated-container.dart';
 import 'package:flutter_revision/app_snack_bar.dart';
 import 'package:flutter_revision/increment_intent.dart';
 import 'package:flutter_revision/main_service.dart';

@@ -50,8 +50,8 @@ class SongPlayerPageState extends State<SongPlayerPage> {
                     ]),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Image.network(
-                    "https://i.pinimg.com/736x/ce/04/e1/ce04e1711f161d6e9cfd94e5868d67c7.jpg",
+                  child: Image.asset(
+                    "assets/images/guitar.jpg",
                     fit: BoxFit.cover,
                     alignment: Alignment.bottomCenter,
                   ),
@@ -92,12 +92,13 @@ class SongPlayerPageState extends State<SongPlayerPage> {
                 children: [Text("1:04"), Text("2:52")],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Icon(
                     Icons.repeat_one,
                     color: Theme.of(context).colorScheme.secondary,
                   ),
+                  const Expanded(child: SizedBox()),
                   Row(
                     children: [
                       IconButton(
@@ -126,12 +127,13 @@ class SongPlayerPageState extends State<SongPlayerPage> {
                       ),
                     ],
                   ),
-                  IconButton(
-                    icon: Icon(
+                  const Expanded(child: SizedBox()),
+                  InkWell(
+                    child: Icon(
                       Icons.queue_music,
                       color: Theme.of(context).colorScheme.secondary,
                     ),
-                    onPressed: () {
+                    onTap: () {
                       Modular.to.navigate("/music/play-list");
                     },
                   ),

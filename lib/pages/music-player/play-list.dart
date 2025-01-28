@@ -184,8 +184,8 @@ Widget buildBottomNavigation(BuildContext context, int currentIndex) {
               child: ColorFiltered(
                 colorFilter: ColorFilter.mode(
                     Theme.of(context).colorScheme.primary, BlendMode.color),
-                child: Image.network(
-                  "https://i.pinimg.com/736x/ce/04/e1/ce04e1711f161d6e9cfd94e5868d67c7.jpg",
+                child: Image.asset(
+                  "assets/images/guitar.jpg",
                   fit: BoxFit.cover,
                   alignment: Alignment.bottomCenter,
                 ),
@@ -281,8 +281,8 @@ Widget buildImage(BuildContext context) {
     ]),
     child: ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Image.network(
-        "https://i.pinimg.com/736x/ce/04/e1/ce04e1711f161d6e9cfd94e5868d67c7.jpg",
+      child: Image.asset(
+        "assets/images/guitar.jpg",
         fit: BoxFit.cover,
         alignment: Alignment.bottomCenter,
       ),
