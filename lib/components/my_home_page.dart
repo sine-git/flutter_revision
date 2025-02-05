@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_revision/theme_provider.dart';
+import 'package:flutter_revision/components/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -17,17 +17,17 @@ class _MyHomePageState extends State<MyHomePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-          backgroundColor: Theme.of(context).colorScheme.background,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           appBar: AppBar(
-            title: Text("My App"),
+            title: const Text("My App"),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               Provider.of<ThemeProvider>(context, listen: false).switchTheme();
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
-          body: Column(
+          body: const Column(
             children: [
               TabBar(tabs: [
                 Tab(

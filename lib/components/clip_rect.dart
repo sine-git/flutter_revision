@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_revision/clip_path.dart';
+import 'package:flutter_revision/components/clip_path.dart';
 
 class AppClipRect extends StatefulWidget {
   const AppClipRect({super.key});
@@ -30,7 +30,7 @@ class MyRectClipper extends CustomClipper<Rect> {
   @override
   Rect getClip(Size size) {
     // TODO: implement getClip
-    return Rect.fromLTWH(0, 0, 80, 80);
+    return const Rect.fromLTWH(0, 0, 80, 80);
   }
 
   @override

@@ -1,61 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_revision/theme_provider.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_revision/components/carousel_view.dart';
+import 'package:flutter_revision/components/main.dart';
+import 'package:flutter_revision/green-beauty/pages/onboarding/onboarding.dart';
 
-import 'main_module.dart';
+import 'green-beauty/pages/home-page/build/home-page.dart';
+import 'green-beauty/theme.dart';
 
 void main() {
-  /*  runApp(ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
-    child: ModularApp(module: MainModule(), child: MyApp()),
-  )); */
-  FlutterError.onError = (FlutterErrorDetails details) {
-    FlutterError.presentError(details); // Affiche les erreurs normalement
-    debugPrint(details.toStringShort()); // Affiche une trace détaillée
-  };
-
-  runApp(ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: ModularApp(
-        module: MainModule(),
-        child: const MyApp(),
-      )));
-
-  /*  runApp(ChangeNotifierProvider(
-    create: (context) => ThemeProvider(),
-    child: ModularApp(module: MainModule(), child: MyApp()),
-  )); */
+  runApp(const MyFlutterApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyFlutterApp extends StatelessWidget {
+  const MyFlutterApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      //   builder: (context, child) => AppAboutDialog(),
-      //showSemanticsDebugger: true,
+    return MaterialApp(
+      home: const HomePage(),
+      theme: beautyTheme,
       debugShowCheckedModeBanner: false,
-      routeInformationParser: Modular.routeInformationParser,
-      routerDelegate: Modular.routerDelegate,
-      //theme: Provider.of<ThemeProvider>(context).theme,
-      theme: theme,
-      //themeMode: ThemeMode.dark,
     );
-
-    /* return CupertinoApp.router(
-        routeInformationParser: Modular.routeInformationParser,
-        routerDelegate: Modular.routerDelegate);
- */
   }
 }
-
-ThemeData theme = ThemeData(
-    colorScheme: const ColorScheme.light(
-        primary: Colors.black,
-        secondary: Colors.grey,
-        tertiary: Colors.pink,
-        inverseSurface: Colors.white,
-        secondaryContainer: Color.fromARGB(255, 218, 215, 215),
-        scrim: Color.fromARGB(255, 93, 93, 93)));
