@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_revision/animations/3d-cube.dart';
+import 'package:flutter_revision/animations/animated-3d.dart';
+import 'package:flutter_revision/animations/animated-colored-container.dart';
+import 'package:flutter_revision/animations/animated-semi-circle.dart';
+import 'package:flutter_revision/animations/animated-shape.dart';
+import 'package:flutter_revision/animations/animation-builder.dart';
 import 'package:flutter_revision/components/carousel_view.dart';
 import 'package:flutter_revision/components/main.dart';
 import 'package:flutter_revision/green-beauty/pages/onboarding/onboarding.dart';
@@ -16,7 +22,7 @@ class MyFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomePage(),
+      home: const CubeWidget(),
       theme: beautyTheme,
       debugShowCheckedModeBanner: false,
     );
