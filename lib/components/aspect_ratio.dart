@@ -15,13 +15,16 @@ class _AppAspectRatioState extends State<AppAspectRatio> {
     return Scaffold(
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(20),
-          height: 100,
-          width: double.infinity,
+          //padding: const EdgeInsets.all(20),
+          alignment: Alignment.centerLeft,
+          height: 500,
+          width: 200,
           color: Colors.blueAccent,
           child: AspectRatio(
-              aspectRatio: 16 / 9,
+              aspectRatio: 1 / 2,
               child: Container(
+                // width = 1/4 height
+                // height = 2/1 width  inverse de l'aspect ratio
                 //  width: 50,
                 // height: 50,
                 color: Colors.yellow,
