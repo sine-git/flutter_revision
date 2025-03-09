@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_revision/animations/paths/triangle.dart';
+import 'package:flutter_revision/animations/advanced/paths/triangle.dart';
 import 'package:flutter_revision/green-beauty/shapes/polygone.dart';
 
 class AnimatedShape extends StatefulWidget {
