@@ -37,13 +37,14 @@ class _GradiantImageShaderMaskPageState
                     image!,
                     TileMode.repeated,
                     TileMode.repeated,
-                    Matrix4.identity().scaled(0.5).storage),
+                    //Matrix4.identity().scaled(0.5).storage
+                    Matrix4.identity().scaled(0.4).storage),
                 blendMode: BlendMode.srcIn,
                 child: const Text(
                   textAlign: TextAlign.center,
-                  "This is cool !",
+                  "ABC",
                   style: TextStyle(
-                      fontSize: 80,
+                      fontSize: 100,
                       fontWeight: FontWeight.w900,
                       color: Colors.white),
                 ),
